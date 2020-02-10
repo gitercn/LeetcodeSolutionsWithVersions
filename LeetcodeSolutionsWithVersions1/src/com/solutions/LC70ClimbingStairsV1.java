@@ -3,7 +3,7 @@ package com.solutions;
 public class LC70ClimbingStairsV1 {
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 46;
         System.out.println(climbStairs(n));
 
     }
@@ -11,16 +11,20 @@ public class LC70ClimbingStairsV1 {
     public static int climbStairs(int n) {
         int methodsSum = 0;
         int step = 0;
-        climb(n);
+        return climb_Stairs(0, n);
 
     }
 
-    private static void climb(int n) {
-        n = 2;
+    private static int climb_Stairs(int i, int n) {
+        if(i>n){
+            return 0;
+        }
+        if(i==n){
+            return 1;
+        }
+        int sum =climb_Stairs(i+1,n)+climb_Stairs(i+2,n);
+        return sum;
 
-//        if(step == 1){
-//
-//        }
     }
 
 }
