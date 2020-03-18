@@ -20,8 +20,8 @@ public class LC88MergeSortedArrayV2 {
                     if(num1i+1<nums1.length && nums1[num1i + 1] <= nums2[num2i]){
                         continue;
                     }
-                    if(nums1[num1i + 1] == 0){
-                        nums1[num1i + 1] = nums2[num2i];
+                    if(nums1[num1i] == 0){
+                        nums1[num1i] = nums2[num2i];
                     } else {
                         for(int k = nums1.length - 1; k >= num1i; k --){
                             nums1[k] = nums1[k - 1];
